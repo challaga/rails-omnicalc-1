@@ -27,7 +27,13 @@ class GameController < ApplicationController
   end
 
   def payment_results
+    @apr = params.fetch("user_apr").to_f
+    @princ =  params.fetch("user_pv").to_f
 
     render({ :template => "game_templates/paymentresults"})
+  end
+
+  def new_random 
+    render({ :template => "game_templates/newrandom"})
   end
 end

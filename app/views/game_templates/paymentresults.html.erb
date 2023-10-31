@@ -7,7 +7,7 @@
     APR
   </dt>
   <dd>
-    <%= params.fetch("user_apr") %>
+    <%= number_to_percentage(@apr) %>
   </dd>
 
   <dt>
@@ -21,7 +21,7 @@
     Principal
   </dt>
   <dd>
-     <%= params.fetch("user_pv") %>
+     <%= number_to_currency(@princ) %>
   </dd>
 
   <dt>
